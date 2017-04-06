@@ -25,6 +25,13 @@
       </div>
       <div class="panel-body">
         <form action="<?php echo $action; ?>" method="post" enctype="multipart/form-data" id="form-loadoffers" class="form-horizontal">
+          <div class="form-group required">
+            <label class="col-sm-2 control-label" for="textarea-loadoffers_limit_field"><?php echo $entry_limit; ?></label>
+            <div class="col-sm-10">
+              <input type="number" required name="loadoffers_limit_field" id="input-limit" class="form-control" value="<?php echo $loadoffers_limit_field ?>">
+            </div>
+          </div>
+
           <div class="form-group">
             <label class="col-sm-2 control-label" for="textarea-loadoffers_text_field"><?php echo $entry_code; ?></label>
             <div class="col-sm-10">
@@ -37,8 +44,6 @@
                 <option value="no" selected="selected"><?php echo $text_disabled; ?></option>
                 <?php } ?>
               </select>
-
-              <!-- <textarea name="loadoffers_text_field" cols="40" rows="5" placeholder="<?php echo $entry_code; ?>"><?php echo $loadoffers_text_field; ?></textarea> -->
               <?php if ($error_code) { ?>
               <div class="text-danger"><?php echo $error_code; ?></div>
               <?php } ?>

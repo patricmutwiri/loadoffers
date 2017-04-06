@@ -36,6 +36,7 @@ class ControllerModuleLoadoffers extends Controller {
         $data['text_column_right'] = $this->language->get('text_column_right');
      
         $data['entry_code'] = $this->language->get('entry_code');
+        $data['entry_limit'] = $this->language->get('entry_limit');
         $data['entry_layout'] = $this->language->get('entry_layout');
         $data['entry_position'] = $this->language->get('entry_position');
         $data['entry_status'] = $this->language->get('entry_status');
@@ -88,7 +89,15 @@ class ControllerModuleLoadoffers extends Controller {
             $data['loadoffers_text_field'] = $this->request->post['loadoffers_text_field'];
         } else {
             $data['loadoffers_text_field'] = $this->config->get('loadoffers_text_field');
-        }   
+        }
+
+        if (isset($this->request->post['loadoffers_limit_field'])) {
+            $data['loadoffers_limit_field'] = $this->request->post['loadoffers_limit_field'];
+        } else {
+            $data['loadoffers_limit_field'] = $this->config->get('loadoffers_limit_field');
+        }
+
+        
           
         // This block parses the status (enabled / disabled)
         if (isset($this->request->post['loadoffers_status'])) {

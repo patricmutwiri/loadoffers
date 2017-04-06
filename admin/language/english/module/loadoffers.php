@@ -9,6 +9,7 @@ $_['text_success']        = 'Success: You have modified module Load Offers!';
  
 // Entry
 $_['entry_code']          = 'Grouping By Product:';
+$_['entry_limit']         = 'Product Limit:';
 $_['entry_status']        = 'Status:';
  
 // Error
